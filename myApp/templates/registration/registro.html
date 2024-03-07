@@ -1,0 +1,19 @@
+{% extends 'myApp/base.html'%}
+{% load static %}
+{% block title %} Login {%endblock title %}
+{% load crispy_forms_tags %}
+{% block contenido %}
+
+<h2>Registro de Usuario</h2>
+    <div>
+        <form action="" method="POST">
+            {% csrf_token %}
+            
+            {{ form | crispy }}
+            <a href={% url 'Home' %}>Inicio</a> 
+            <a href={% url 'login' %}>Ingresar</a> 
+            <input type="submit" value='Registrar' />
+        </form>  
+    </div>
+
+{% endblock contenido %}

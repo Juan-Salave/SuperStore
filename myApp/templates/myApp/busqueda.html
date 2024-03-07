@@ -1,0 +1,36 @@
+{% extends 'myApp/base.html' %}
+{%block contenido%}
+{% load humanize %}
+
+<h1>Encuentre su producto</h1>
+    
+<form method="POST">   {% csrf_token %}        
+    <div>
+        <table>
+            {{ formu.as_table }}
+        </table>
+        <input class="boton-editar" type="submit" value="BUSCAR">
+    </div>
+</form>
+
+<ul>
+    {% for i in descripcion%}
+        <div class="productos">
+            <div class="producto">
+                <div class="contenedor">
+                    <img src="{{ i.imagen_uno.url }}" alt='img'>
+                    <img src="{{ i.imagen_dos.url }}" alt='img'>
+                </div>
+                <div class="detalles">
+                    <h3>${{ i.precio | intcomma }}</h3>
+                    <h4>{{ i.descripcion | title }} - {{ i.marca | capfirst }}</h4>
+                    <h4>{{ i.nombre_vendedor | title }} - {{ i.telefono}}</h4>
+                </div>
+            </div>
+        </div>
+    {% endfor %}
+</ul>
+
+{%endblock%}
+
+

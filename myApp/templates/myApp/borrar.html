@@ -1,0 +1,13 @@
+{% extends 'myApp/base.html' %}
+{% load static %}
+{% block contenido %}
+
+<h1>Borrar Cliente</h1>
+<div class='contenedor-lista-clientes'>
+    <form method="post">{% csrf_token %}
+        ¿Estás seguro que deseas borrar el Producto:  {{ object.descripcion }}?
+        <input class="boton-editar" type="submit" value='Borrar' />
+        <a class="boton-editar" href='{% url 'Lista'%}'>Regresar</a>
+    </form>
+</div>
+{% endblock contenido %}

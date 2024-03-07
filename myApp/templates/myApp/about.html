@@ -1,0 +1,27 @@
+{% extends 'myApp/base.html' %}
+{%block contenido%}
+{% load static %}
+
+    <section id="scroll">
+        <div class="container px-5">
+            <div class="row gx-5 align-items-center">
+                <div class="col-lg-6 order-lg-2">
+                    <div class="p-5"><img class="img-fluid rounded-circle" src= {% static 'myApp/img/about1.png' %} alt="..." /></div>
+                </div>
+                <div class="col-lg-6 order-lg-1">
+                    <div class="p-5">
+                        <h2 class="display-4">Sobre mi...</h2>
+                        <p> Mi nombre Juan  Miguel Salave, Naci en Caracas la capital de
+                            Venezuela estudie secundaria en un colegio catolico,
+                            Luego de ello 5 años de carrea univercitaria donde estudie Igeneria Mecanica en la Universidad Nacional Experimental del Táchira (UNET).
+                            Trabaje en una petrolera llamada Baker Hughes durante casi 5 años donde me plantie irme a vivir a otro pais, asi que aca estoy Argentina actualmente en capital federal.
+                            Durante la univercidad estudie varios topicos (temas) relacionados con la programacion vimos un programa llamado RAPTOR que es fundamentalmente un programa que proporciona un entorno de programación basado en diagramas de flujo y siempre me quedo la curiosidada, 
+                            empece con algo muy basico de Python con la libreria tKinter en la Universidad Tecnológica Nacional (UTN) de alli quise profundisar mas y me recomendaron el python que estudie aca.
+                            Actual mente ejerzo como jefe de taller de un concesionario de autos de la maraca Peugeot.
+                            hoby: Hockey sobre Hielo y Rollers y tambien Crossfit.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+{%endblock%}

@@ -1,0 +1,37 @@
+{% extends 'myApp/base.html' %}
+{%block contenido%}
+{% load static %}
+
+<section id="scroll">
+    <div class="container px-5">
+        <div class="row gx-5 align-items-center">
+            <div class="col-lg-6 order-lg-2">
+                <div class="p-5"><img class="img-fluid rounded-circle" src= {% static 'myApp/img/tienda/tienda2.jpeg' %} alt="..." /></div>
+            </div>
+            <div class="col-lg-6 order-lg-1">
+                <div class="contenedor_logo">
+                    <img src="{% static 'myApp/img/superstore.png' %}"alt="logo" class="logo" style="width: 400px;">
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<div class="contenedor_logo">
+    <img src="{% static 'myApp/img/superstore.png' %}"alt="logo" class="logo" style="width: 400px;">
+</div>
+<section id="scroll">
+    <div class="container px-5">
+        <div class="row gx-5 align-items-center">
+            <div class="col-lg-6 order-lg-2">
+                <div class="p-5"><img class="img-fluid rounded-circle" src= {% static 'myApp/img/tienda/tienda3.jpg' %} alt="..." /></div>
+            </div>
+            <div class="col-lg-6 order-lg-1">
+                <div class="contenedor_logo">
+                    <img src="{% static 'myApp/img/superstore.png' %}"alt="logo" class="logo" style="width: 400px;">
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+{%endblock%}

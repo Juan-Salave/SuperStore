@@ -1,0 +1,18 @@
+{% extends 'myApp/base.html' %}
+{% load static %}
+{% block contenido %}
+
+<h1>Lista de productos</h1>
+    {% for i in object_list %}
+            <h4>
+                <li>{{ i.descripcion | capfirst }} - {{ i.marca | title }} - {{i.precio}}  - {{i.nombre_vendedor}} - {{i.telefono}}</li>
+                <a href="{% url 'Ver' i.id %}">Ver</a>  
+                <a href="{% url 'Editar' i.id %}">Editar</a>  
+                <a href="{% url 'Borrar' i.id %}">Borrar</a>       
+            </h4>
+ 
+    {% endfor %}
+</div>     
+
+
+{% endblock contenido %}

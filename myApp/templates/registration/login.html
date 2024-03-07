@@ -1,0 +1,19 @@
+{% extends 'myApp/base.html'%}
+{% load static %}
+{% block title %} Login {%endblock title %}
+
+
+{% block contenido %}
+<h2>LOGIN</h2>
+    <div>
+        <form action="" method="POST">
+            {% csrf_token %}
+            {{ form.as_p }}
+
+            {{msg_login}}
+
+            <button type="submit">Iniciar Sesion</button>
+        </form>  
+    </div>
+
+{% endblock contenido %}
