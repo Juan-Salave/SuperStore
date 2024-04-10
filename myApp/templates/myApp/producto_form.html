@@ -2,12 +2,16 @@
 {% load static %}
 {% block contenido %}
 
-<h1>Cargar Producto</h1>
-<div id="contenido">
-    <form method='POST' enctype='multipart/form-data'>     {% csrf_token %}
-        {{ form.as_p }}
-    <a> <input class="boton" type="submit" value="Enviar"> </a>
-    </form>
-</div>
+<main class="comtenedor">
 
+
+    <h1>Cargar Producto</h1>
+
+    <div id="contenido">
+        <form class='formulario' method='POST' enctype='multipart/form-data'>     {% csrf_token %}
+        {{ form.as_p }}
+        <a> <input class="formulario__submit" class="boton" type="submit" value="Enviar"> </a>
+        </form> 
+    </div>
+</main>
 {% endblock contenido %}

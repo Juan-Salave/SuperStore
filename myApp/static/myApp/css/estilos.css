@@ -1,14 +1,42 @@
-
-* {
-    margin:0;
-    padding:0;
+html {
+    box-sizing: border-box;
+    font-size: 62.5%;
 }
+*, *:before, *:after {
+    box-sizing: inherit;
+}
+
+/** Globales **/
 
 body {
-    background-color: #EDF2F7;
-    font-family: 'Open Sans', sans-serif;
+    background-color: var(--primario);
+    font-size: 1.6rem;
+    line-height: 1.5;
+}
+p {
+   font-size: 1.8rem;
+   font-family: Arial, Helvetica, sans-serif; 
+   color: var(--blanco);
+}
+a {
+    text-decoration: none;
+}
+img {
+    width: 100%;
+}
+.comtenedor {
+    max-width: 110rem;
+    margin: 0 auto;
 }
 
+h1, h2, h3 {
+    text-align: center;
+    color: var(--secundario);
+    font-family: var(--fuente);
+}
+h1 { font-size: 4rem; }
+h2 { font-size: 3.2rem; }
+h3 { font-size: 2.4rem; }
 
 header {
     width: 100%;
@@ -20,12 +48,79 @@ header {
 header > div {
     width: 50%;
 }
-
-.galeria {
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr;
-    gap: 30px;
+.comtenedor {
+    max-width: 110rem;
+    margin: 0 auto;
 }
+.grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+}
+
+@media (min-width: 768px) {
+    .grid {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 2rem;
+    }
+}
+.producto {
+    background-color: var(--primarioOscuro);
+    padding: 1rem;
+}
+.producto__nombre {
+    font-size: 4rem;
+}
+.producto__precio {
+    font-size: 2.8rem;
+    color: var(--secundario);
+}
+.producto__nombre,
+.producto__precio {
+    font-family: var(--fuente);
+    margin: 1rem 0;
+    text-align: center;
+    line-height: 1.2;
+}
+.formulario {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+}
+.formulario__campo {
+    border-color: var(--primarioOscuro);
+    border-width: 1rem;
+    border-style: solid;
+    background-color: transparent;
+    color: var(--blanco);
+    font-size: 2rem;
+    font-family: Arial, Helvetica, sans-serif;
+    padding: 1rem;
+    text-align: center;
+}
+.formulario__submit {
+    background-color: var(--secundario);
+    border-radius: 8px;
+    font-size: 1.8rem;
+    font-family: var(--fuente);
+    padding: .8rem;
+
+}
+.formulario__submit:hover {
+    cursor: pointer;
+    background-color: var(--secundarioOscuro);
+}
+
+
+
+
+
+
+
+
+
+
+
 
 .galeria img {
     width: 100%;
@@ -95,15 +190,6 @@ nav > ul > li > a {
     color:white;
     text-decoration: none;
 }
-
-
-#contenido {
-    width: 80%;
-    margin: auto;
-    max-width: 1280px;
-    min-height: 80vh;
-}
-
 .productos {
     display: flex;
     flex-wrap: wrap;

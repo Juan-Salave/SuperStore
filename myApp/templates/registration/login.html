@@ -4,16 +4,17 @@
 
 
 {% block contenido %}
-<h2>LOGIN</h2>
-    <div>
-        <form action="" method="POST">
-            {% csrf_token %}
-            {{ form.as_p }}
+<main class="comtenedor">
+    <h1>LOGIN</h1>
+        <div class='formulario'>
+            <form class='formulario__submit' action="" method="POST">
+                {% csrf_token %}
+                {{ form.as_p }}
 
-            {{msg_login}}
+                {{msg_login}}
 
-            <button type="submit">Iniciar Sesion</button>
-        </form>  
-    </div>
-
+            <button class="formulario__submit" type="submit">Iniciar Sesion</button>
+            </form>  
+        </div>
+</main>
 {% endblock contenido %}

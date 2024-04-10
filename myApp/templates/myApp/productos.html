@@ -1,24 +1,32 @@
 {% extends 'myApp/base.html' %}
 {%block contenido%}
 {% load humanize %}
-<h2 class="display-4">Productos...</h2>
-<div id="contenido">
 
-    {% for i in producto%}
-    <div class="productos">
-        <div class="producto">
-            <div class="contenedor">
-                <img src="{{ i.imagen_uno.url }}" alt='img'>
+<main class="comtenedor">
+    <h1>Productos</h1>
+
+    <div class="grid">
+
+        {% for i in producto%}
+            <div class="producto">
+
+                <div>
+                    <img src="{{ i.imagen_uno.url }}" alt='img'>
+                </div>
+
+                <div>
+                    <p class="producto__nombre">
+                        <a href="{% url 'Ver' i.id %}">{{ i.descripcion | title }}</a>
+                    </p>
+
+                    <p class="producto__precio">{{ i.marca | capfirst }}</p>
+
+                    <p class="producto__precio">${{ i.precio | intcomma }}</p>
+                </div>
             </div>
-            <div class="detalles">
-                <h4>
-                    <a href="{% url 'Ver' i.id %}">{{ i.descripcion | title }}</a>
-                </h4>
-                <h4>{{ i.marca | capfirst }}</h4>
-                <h3>${{ i.precio | intcomma }}</h3>
-            </div>
-        </div>
+        {% endfor %}
     </div>
 
-    {% endfor %}
+</main>
+
 {%endblock%}
