@@ -1,3 +1,9 @@
+:root {
+    --blanco: #FFF;
+    --fondo: #21232a;
+    --fuente: "Bebas Neue", sans-serif;;      
+}
+
 html {
     box-sizing: border-box;
     font-size: 62.5%;
@@ -9,35 +15,45 @@ html {
 /** Globales **/
 
 body {
-    background-color: var(--primario);
+    background-color: var(--fondo);
     font-size: 1.6rem;
     line-height: 1.5;
-}
-p {
-   font-size: 1.8rem;
-   font-family: Arial, Helvetica, sans-serif; 
-   color: var(--blanco);
 }
 a {
     text-decoration: none;
 }
 img {
-    width: 100%;
+    width: 100%;   
+}
+.img__producto {
+    width: 30rem;
+    height: 30rem;
+    
 }
 .contenedor {
     max-width: 110rem;
     margin: 0 auto;
 }
+.titulos {
+    margin: 7rem;
+    color: #FFF;
 
-h1, h2, h3 {
+}
+h1, h2, h3, h4 {
     text-align: center;
-    color: var(--secundario);
+    color: var(--blanco);
+    font-family: var(--fuente);
+    margin: 0%;
+}
+h1 { font-size: 5rem; }
+h2 { font-size: 3rem; }
+h3 { font-size: 2.4rem; }
+h4 { font-size: 1.8rem; }
+p  {
+    font-size: 2rem;
+    color: var(--blanco);
     font-family: var(--fuente);
 }
-h1 { font-size: 4rem; }
-h2 { font-size: 3.2rem; }
-h3 { font-size: 2.4rem; }
-
 header {
     width: 100%;
     height: 80px;
@@ -48,7 +64,7 @@ header {
 header > div {
     width: 50%;
 }
-.comtenedor {
+.contenedor {
     max-width: 110rem;
     margin: 0 auto;
 }
@@ -67,20 +83,6 @@ header > div {
 .producto {
     background-color: var(--primarioOscuro);
     padding: 1rem;
-}
-.producto__nombre {
-    font-size: 4rem;
-}
-.producto__precio {
-    font-size: 2.8rem;
-    color: var(--secundario);
-}
-.producto__nombre,
-.producto__precio {
-    font-family: var(--fuente);
-    margin: 1rem 0;
-    text-align: center;
-    line-height: 1.2;
 }
 .formulario {
     display: grid;
@@ -104,36 +106,20 @@ header > div {
     font-size: 1.8rem;
     font-family: var(--fuente);
     padding: .8rem;
-
 }
 .formulario__submit:hover {
     cursor: pointer;
     background-color: var(--secundarioOscuro);
 }
-
-
-
-
-
-
-
-
-
-
-
-
 .galeria img {
     width: 100%;
     height: 200px;
     object-fit: cover;
 }
-
-
 input[type=text], input[type=email], select, textarea {
     width: 100%;
     padding: 5px 10px;
 }
-
 .button {
     padding: 5px 10px;
     border: none;
@@ -149,85 +135,37 @@ input[type=text], input[type=email], select, textarea {
     .display-4 {
       font-size: 3.5rem;
     }
-  }
-
+}
 .button.primary {
     background-color: #2B6CB0;
 }
-
 .button.secondary {
     background-color: #4A5568;
 }
-
-
 .contenedor_logo {
     display: flex;
     align-items: center;
 }
-
 .logo {
     width: 100px;
     margin-left: 20px;
 }
-
 nav {
     display: flex;
     justify-content: flex-end;
     align-items: center;
     height: 100%;
 }
-
 nav > ul {
     margin-right: 20px;
 }
-
 nav > ul > li {
     display: inline;
     margin-left: 10px;
 }
-
 nav > ul > li > a {
     color:white;
     text-decoration: none;
-}
-.productos {
-    display: flex;
-    flex-wrap: wrap;
-}
-
-@keyframes animacion_producto_desktop {
-    0% {
-        transform: rotate(-20deg);
-        opacity: 0;
-    }
-
-    100% {
-        transform: rotate(0);
-        opacity: 1;
-    }
-}
-
-
-.productos .producto {
-    width: 25%;
-    margin-top: 15px;
-    animation: animacion_producto_desktop 0.5s;
-}
-
-.productos .producto img {
-    width: 80%;
-    height: 200px;
-    object-fit: cover;
-}
-
-.productos .producto .contenedor_producto {
-    background-color: white;
-    width: 80%;
-    margin:auto;
-}
-
-.productos .producto .detalles {
-    padding: 5px;
 }
 
 
@@ -238,7 +176,6 @@ footer {
     height: 100px;
     background-color: #2D3748;
 }
-
 footer .marcas {
     width: 100%;
     height: 100px;
@@ -247,22 +184,18 @@ footer .marcas {
     justify-content: space-around;
     align-items: center;
 }
-
 footer .marcas img {
     width: 50px;
 }
-
 footer .logo_footer {
     display: flex;
     justify-content: center;
     align-items: center;
     height:calc(100% - 100px);
 }
-
 footer .logo_footer img {
     width: 100px;
 }
-
 .menu {
     width: 40px;
     position: absolute;
@@ -270,15 +203,12 @@ footer .logo_footer img {
     top: 10px;
     display: none;
 }
-
 label.error {
     color: darkred;
 }
-
 input.error {
     border: 2px solid darkred;
 }
-
 
 /*MEDIA QUERIES*/
 
@@ -383,4 +313,3 @@ input.error {
     }
 
 }
-

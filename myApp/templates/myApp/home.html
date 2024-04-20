@@ -3,24 +3,24 @@
 {% load humanize %}
 
 <main class="contenedor">
-    <h1>Productos</h1>
+    <h1 class="titulos">Productos</h1>
 
     <div class="grid">
 
         {% for i in producto%}
             <div class="producto">
                 <a href="{% url 'Ver' i.id %}">
-                    <div>
+                    <div class="img__producto">
                         <img src="{{ i.imagen_uno.url }}" alt='img'>
                     </div>
 
                     <div>
-                        <p class="producto__nombre">{{ i.descripcion | title }}</p>
+                        <h3 class="producto__nombre">{{ i.descripcion | title }}</h3>
 
-                        <p class="producto__precio">{{ i.marca | capfirst }}</p>
+                        <h4 class="producto__precio">{{ i.marca | capfirst }}</h4>
 
-                        <p class="producto__precio">{{ i.precio | intcomma }}USD</p>
-                </div>
+                        <h4 class="producto__precio">{{ i.precio | intcomma }}USD</h4>
+                    </div>
                 </a>
             </div>
         {% endfor %}
