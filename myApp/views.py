@@ -9,19 +9,15 @@ from django.contrib.auth.mixins import LoginRequiredMixin
 from django.contrib.auth import login, authenticate
 from django.contrib.auth.forms import AuthenticationForm
 
-
-def home(request):
-    return render(request, 'myApp/home.html')
-
 def about(request):
     return render(request, 'myApp/about.html')
 
-def productos(request):
+def home (request):
     producto = Producto.objects.all()
     data = {
         'producto':producto
     }
-    return render(request, 'myApp/productos.html', data)
+    return render(request, 'myApp/home.html', data)
 
 def login_request(request):
     msg_login=""
