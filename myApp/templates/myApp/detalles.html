@@ -7,7 +7,7 @@
     <h1>Producto</h1>
     <div>
         <div class="contenedor">
-            <img src="{{ producto.imagen_dos.url }}" alt='img'>
+            {% comment %} <img src="{{ producto.imagen_dos.url }}" alt='img'> {% endcomment %}
             <img src="{{ producto.imagen_uno.url }}" alt='img'>
         </div>
         <h2>
@@ -29,7 +29,7 @@
             <a href="{% url 'Lista' %}">Lista de Productos</a>
         </p>
         <p>
-            <a href="{% url 'Productos' %}">Seguir Viendo</a>
+            <a href="{% url 'Home' %}">Seguir Viendo</a>
         </p>
     </div>     
 </body>

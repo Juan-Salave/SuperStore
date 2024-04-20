@@ -3,6 +3,8 @@
 {% block contenido %}
 
 <h1>Lista de productos</h1>
+
+<div class="contenedor">
     {% for i in object_list %}
             <h4>
                 <li>{{ i.descripcion | capfirst }} - {{ i.marca | title }} - {{i.precio}}  - {{i.nombre_vendedor}} - {{i.telefono}}</li>

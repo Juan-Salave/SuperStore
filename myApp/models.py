@@ -5,7 +5,6 @@ class Producto (models.Model):
     descripcion = models.CharField(max_length=50)
     precio = models.IntegerField()
     imagen_uno = models.ImageField(upload_to='img1')
-    imagen_dos = models.ImageField(upload_to='img2')
     nombre_vendedor = models.CharField(max_length=50)
     telefono = models.IntegerField()
           

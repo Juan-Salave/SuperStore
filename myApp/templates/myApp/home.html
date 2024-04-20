@@ -2,27 +2,26 @@
 {%block contenido%}
 {% load humanize %}
 
-<main class="comtenedor">
+<main class="contenedor">
     <h1>Productos</h1>
 
     <div class="grid">
 
         {% for i in producto%}
             <div class="producto">
+                <a href="{% url 'Ver' i.id %}">
+                    <div>
+                        <img src="{{ i.imagen_uno.url }}" alt='img'>
+                    </div>
 
-                <div>
-                    <img src="{{ i.imagen_uno.url }}" alt='img'>
+                    <div>
+                        <p class="producto__nombre">{{ i.descripcion | title }}</p>
+
+                        <p class="producto__precio">{{ i.marca | capfirst }}</p>
+
+                        <p class="producto__precio">{{ i.precio | intcomma }}USD</p>
                 </div>
-
-                <div>
-                    <p class="producto__nombre">
-                        <a href="{% url 'Ver' i.id %}">{{ i.descripcion | title }}</a>
-                    </p>
-
-                    <p class="producto__precio">{{ i.marca | capfirst }}</p>
-
-                    <p class="producto__precio">${{ i.precio | intcomma }}</p>
-                </div>
+                </a>
             </div>
         {% endfor %}
     </div>
