@@ -31,8 +31,8 @@
                 {% if user.is_authenticated %}
                     <li>    <a href={% url 'Logout' %}>Salir</a>  </li>
                                     
-                    <li>    <a href='#'>{{user.username | upper}}</a>   </li>
-                                    
+                    <li>    <a class="usuario" href='#'>{{user.username | upper}}</a>   </li>
+                                   
                 {% else %}
                     <li>    <a href={% url 'Login' %}>Ingresar</a>    </li>
                     <li>    <a href={% url 'Registro' %}>Registrarse</a>    </li>

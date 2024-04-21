@@ -11,15 +11,15 @@
             <div class="producto">
                 <a href="{% url 'Ver' i.id %}">
                     <div class="img__producto">
-                        <img src="{{ i.imagen_uno.url }}" alt='img'>
+                        <img class="img__producto" src="{{ i.imagen_uno.url }}" alt='img'>
                     </div>
 
                     <div>
                         <h3 class="producto__nombre">{{ i.descripcion | title }}</h3>
 
-                        <h4 class="producto__precio">{{ i.marca | capfirst }}</h4>
+                        <h3 class="producto__precio">{{ i.marca | capfirst }}</h3>
 
-                        <h4 class="producto__precio">{{ i.precio | intcomma }}USD</h4>
+                        <h4 class="producto__precio">{{ i.precio | intcomma }} USD</h4>
                     </div>
                 </a>
             </div>

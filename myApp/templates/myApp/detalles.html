@@ -1,41 +1,38 @@
 {% extends 'myApp/base.html' %}
 {% load static %}
 {% block contenido %}
-{% load humanize %}
 
 <body>
-    <h1  class= "titulos"> Producto</h1>
+    <h1  class= "titulos"> {{ producto.descripcion}}</h1>
 
     <div class="grid_detalles">
         <div>
             <img class="img__producto" src="{{ producto.imagen_uno.url }}" alt='img'>
         </div>
-        <div>
+
+        <div class="grid_detalles--descripcion">
             <h2>
-                Marca : {{producto.marca}}
+                Marca : {{ producto.marca}}
             </h2> 
+                
             <h3>
-                Descripcion : {{producto.descripcion}}
+                Vendedor : {{ producto.nombre_vendedor}}
             </h3>
-            <h3>
-                Precio : ${{producto.precio | intcomma}}
-            </h3>
-            <h4>
-                Contacto : {{producto.nombre_vendedor}}
-            </h4>
-            <h4>
-                telefono : {{producto.telefono}}
-            </h4>
 
- 
+            <h3>
+                telefono : {{ producto.telefono}}
+            </h3>
+
+            <h4>
+                Precio : {{ producto.precio }} USD
+            </h4>
+            <br>
 
             <p>
-                <a class="button" href="{% url 'Lista' %}">Productos</a>
-            </p>
-            <p>
-                <a class="button" href="{% url 'Home' %}">Inicio</a>
+                <a class="button" href="{% url 'Lista' %}">Productos</a> <a class="button" href="{% url 'Home' %}">Inicio</a>
             </p>
         </div>
+    </div>
          
 </body>
 {% endblock contenido %}

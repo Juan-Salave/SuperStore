@@ -30,7 +30,12 @@ img {
 .img__producto {
     width: 30rem;
     height: 30rem;
-    
+    border-radius: 20px;
+}
+.img__about {
+    width: 35rem;
+    height: 38rem;
+    border-radius: 8rem;
 }
 .contenedor {
     max-width: 110rem;
@@ -38,7 +43,7 @@ img {
 }
 .titulos {
     margin: 5rem;
-    color: #FFF;
+    color: var(--terceario);
 
 }
 h1, h2, h3, h4 {
@@ -50,7 +55,7 @@ h1, h2, h3, h4 {
 h1 { font-size: 5rem; }
 h2 { font-size: 3rem; }
 h3 { font-size: 2.4rem; }
-h4 { font-size: 1.8rem; }
+h4 { font-size: 1.8rem; color: var(--terceario);}
 p  {
     font-size: 2rem;
     color: var(--blanco);
@@ -89,9 +94,17 @@ header > div {
     grid-template-columns: repeat(2, 1fr);
     margin: auto;
 }
+.grid_detalles--descripcion {
+    margin-top: 5rem;
+}
 .producto {
     background-color: var(--primarioOscuro);
     padding: 1rem;
+}
+/* ABOUT */
+.dos__columnas {
+    display: grid;
+    grid-template-columns: 40% 60%;
 }
 .formulario {
     display: grid;
@@ -119,8 +132,8 @@ input[type=text], input[type=email], select, textarea {
     border: none;
     color: var(--segundario);
     border-radius: 5px;
-    display: grid;
-    justify-content: right;
+    margin: 1rem;
+    
 }
 .button:hover {
     cursor: pointer;
@@ -151,7 +164,9 @@ nav > ul > li > a {
     color:white;
     text-decoration: none;
 }
-
+.usuario {
+    color: var(--terceario);
+}
 
 /*FOOTER*/
 
