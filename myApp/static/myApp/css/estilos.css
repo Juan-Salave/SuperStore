@@ -1,6 +1,8 @@
 :root {
     --blanco: #FFF;
     --fondo: #21232a;
+    --segundario: #4A5568;
+    --terceario: #7cf83e; 
     --fuente: "Bebas Neue", sans-serif;;      
 }
 
@@ -35,7 +37,7 @@ img {
     margin: 0 auto;
 }
 .titulos {
-    margin: 7rem;
+    margin: 5rem;
     color: #FFF;
 
 }
@@ -80,6 +82,13 @@ header > div {
         gap: 2rem;
     }
 }
+.grid_detalles {
+    max-width: 70rem;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    margin: auto;
+}
 .producto {
     background-color: var(--primarioOscuro);
     padding: 1rem;
@@ -100,47 +109,22 @@ header > div {
     padding: 1rem;
     text-align: center;
 }
-.formulario__submit {
-    background-color: var(--secundario);
-    border-radius: 8px;
-    font-size: 1.8rem;
-    font-family: var(--fuente);
-    padding: .8rem;
-}
-.formulario__submit:hover {
-    cursor: pointer;
-    background-color: var(--secundarioOscuro);
-}
-.galeria img {
-    width: 100%;
-    height: 200px;
-    object-fit: cover;
-}
 input[type=text], input[type=email], select, textarea {
     width: 100%;
     padding: 5px 10px;
 }
 .button {
-    padding: 5px 10px;
+    background-color: var(--blanco);
+    padding: .4rem 1rem;
     border: none;
-    color:white;
+    color: var(--segundario);
     border-radius: 5px;
+    display: grid;
+    justify-content: right;
 }
-.display-4 {
-    font-size: calc(1.475rem + 2.7vw);
-    font-weight: 300;
-    line-height: 1.2;
-  }
-  @media (min-width: 1200px) {
-    .display-4 {
-      font-size: 3.5rem;
-    }
-}
-.button.primary {
-    background-color: #2B6CB0;
-}
-.button.secondary {
-    background-color: #4A5568;
+.button:hover {
+    cursor: pointer;
+    background-color: var(--terceario);
 }
 .contenedor_logo {
     display: flex;
@@ -175,6 +159,7 @@ footer {
     width: 100%;
     height: 100px;
     background-color: #2D3748;
+    margin-top: 10rem;
 }
 footer .marcas {
     width: 100%;
@@ -185,131 +170,5 @@ footer .marcas {
     align-items: center;
 }
 footer .marcas img {
-    width: 50px;
-}
-footer .logo_footer {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height:calc(100% - 100px);
-}
-footer .logo_footer img {
-    width: 100px;
-}
-.menu {
-    width: 40px;
-    position: absolute;
-    left: 10px;
-    top: 10px;
-    display: none;
-}
-label.error {
-    color: darkred;
-}
-input.error {
-    border: 2px solid darkred;
-}
-
-/*MEDIA QUERIES*/
-
-/*TABLET*/
-
-@media(max-width:1024px) {
-
-    .galeria {
-        grid-template-columns:1fr 1fr;
-    }
-
-    @keyframes animacion_producto_tablet {
-
-        0% {
-            opacity: 0;/*0-1*/
-        }
-
-        100% {
-            opacity: 1;
-        }
-
-    }
-
-    .productos .producto {
-        width: 50%;
-        animation: animacion_producto_tablet 2s;
-    }
-
-}
-
-/*SMARTPHONE*/
-@media(max-width:480px) {
-
-    .galeria {
-        grid-template-columns: 1fr;
-    }
-
-    .menu {
-        display: block;
-    }
-
-    @keyframes animacion_producto_smartphone {
-
-        0% {
-            transform: scale(0.1);/*0 - 1*/
-        }
-
-        80%{
-            transform: scale(1.05);
-        }
-
-        100% {
-            transform: scale(1);
-        }
-    }
-
-
-    .productos .producto {
-        width: 100%;
-        animation: animacion_producto_smartphone 0.8s;
-    }
-
-    header {
-        flex-direction: column;
-        height: 60px;
-        transition: all 0.8s;
-        /*position: fixed;
-        left:0;
-        top:0;*/
-        overflow: hidden;
-    }
-
-    #contenido {
-        margin-top: 60px;
-    }
-
-    header > div {
-        width: 100%;
-    }
-
-    nav {
-        justify-content: center;
-    }
-
-    .contenedor_logo {
-        justify-content: center;
-    }
-
-    .logo {
-        margin-top: 15px;
-    }
-
-    nav > ul {
-        margin-right: 0;
-    }
-
-    nav > ul > li {
-        display: block;
-        margin:0;
-        text-align: center;
-        padding: 20px 0;
-    }
-
+    width: 6rem;
 }

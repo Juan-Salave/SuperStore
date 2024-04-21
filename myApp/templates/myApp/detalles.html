@@ -4,33 +4,38 @@
 {% load humanize %}
 
 <body>
-    <h1>Producto</h1>
-    <div>
-        <div class="contenedor">
-            {% comment %} <img src="{{ producto.imagen_dos.url }}" alt='img'> {% endcomment %}
-            <img src="{{ producto.imagen_uno.url }}" alt='img'>
+    <h1  class= "titulos"> Producto</h1>
+
+    <div class="grid_detalles">
+        <div>
+            <img class="img__producto" src="{{ producto.imagen_uno.url }}" alt='img'>
         </div>
-        <h2>
-            Marca: {{producto.marca}}
-        </h2> 
-        <h3>
-            Descripcion: {{producto.descripcion}}
-        </h3>
-        <h3>
-            Precio: ${{producto.precio | intcomma}}
-        </h3>
-        <h4>
-            Contacto: {{producto.nombre_vendedor}}
-        </h4>
-        <h4>
-            telefono: {{producto.telefono}}
-        </h4>
-        <p>
-            <a href="{% url 'Lista' %}">Lista de Productos</a>
-        </p>
-        <p>
-            <a href="{% url 'Home' %}">Seguir Viendo</a>
-        </p>
-    </div>     
+        <div>
+            <h2>
+                Marca : {{producto.marca}}
+            </h2> 
+            <h3>
+                Descripcion : {{producto.descripcion}}
+            </h3>
+            <h3>
+                Precio : ${{producto.precio | intcomma}}
+            </h3>
+            <h4>
+                Contacto : {{producto.nombre_vendedor}}
+            </h4>
+            <h4>
+                telefono : {{producto.telefono}}
+            </h4>
+
+ 
+
+            <p>
+                <a class="button" href="{% url 'Lista' %}">Productos</a>
+            </p>
+            <p>
+                <a class="button" href="{% url 'Home' %}">Inicio</a>
+            </p>
+        </div>
+         
 </body>
 {% endblock contenido %}
