@@ -13,7 +13,9 @@
     
 <header id="contenedor_logo">
     <div class="contenedor_logo">
-        <img src="{% static 'myApp/img/superstore.png' %}"alt="logo" class="logo" style="width: 180px;">
+        <a href={% url 'Home' %} >
+            <img src="{% static 'myApp/img/superstore.png' %}"alt="logo" class="logo" style="width: 180px;">  
+        </a>
     </div>
     <div>
         <nav id="nav">
