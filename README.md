@@ -1,24 +1,31 @@
-# SuperStore 
-  Proyecto creado individualmente por Juan Miguel Salave 
+# Proyecto fin de curso Django 
+# El proyecto se llama SuperStore 
 
-- Se creo el proyecto pedido. 
-- se realizo una app
-- se configuro el admin 
-- registro
-- login
-- logout
+# Alumno : Juan Miguel Salave 
+
+* 
+  Se creo una tienda parecida a lo que es mercadolibre en la cual se pueden
+  subir articulos, en venta.
+* 
+
+- Se realizo una app
+- Se configuro el admin 
+- Registro
+- Login
+- Logout
 - Vistas vasadas en class y en funciones
 - Templates fueron al rededor de 7
 - Formulario de venta, registro.
-- el proyecto es una tienda virtual donde se vende articulos electronicos 
+- El proyecto es una tienda virtual donde se vende articulos electronicos 
 con carga de informacion imagenes y contactos
 
-- Se usaron lo siguente:
+# Tecnologias usadas :
 - Python 3.12.0
 - django == 4.2
 - pillow
 - django-admin-interface
-- crispy-bootstrap5
+- HTML5
+- CSS
+- Git
+- GitHub
   
-- Dejo el link del video explicativo
-  https://www.youtube.com/watch?v=agKLr9rHghc&ab_channel=JuanMiguelSalaveDuarte
