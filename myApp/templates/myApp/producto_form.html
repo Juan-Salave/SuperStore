@@ -2,15 +2,15 @@
 {% load static %}
 {% block contenido %}
 
-<main class="comtenedor">
+<main class="contenedor">
 
 
-    <h1>Cargar Producto</h1>
+    <h1 class="titulos"> Cargar Producto</h1>
 
-    <div id="contenido">
-        <form class='formulario' method='POST' enctype='multipart/form-data'>     {% csrf_token %}
-        {{ form.as_p }}
-        <a> <input class="formulario__submit" class="boton" type="submit" value="Enviar"> </a>
+    <div class="contenedor__busqueda">
+        <form method='POST' enctype='multipart/form-data'>     {% csrf_token %}
+            {{ form.as_p }}
+            <input class="button" class="boton" type="submit" value="Enviar">
         </form> 
     </div>
 </main>
